@@ -6,6 +6,16 @@
 - Instead of exposing the public IP, use Azure Bastion Service. It is more secure.
 - It is a fully managed service, therefore, bastion service will create its own compute machines that will establish the connectivity within a subnet on the Virtual Network
 
+# Why use Azure Bastion?
+- The most common way to access a Virtual Machine is either by RDP (3389) or SSH (22), but it is a vulnerability if we open up RDP/SSH.
+- Instead, Azure Bastion provides secure and seamless RDP/SSH connectivity to your virtual machines directly in the Azure portal over TLS. 
+- When you connect using Azure Bastion, your virtual machines do not need a public IP address. Closing RDP/SSH is strongly recommended!!! 
+
+# IMPORTANT **** 
+- Again, Azure Bastion provides secure RDP and SSH connectivity to all the VMs in the virtual network in which it is provisioned. 
+- Using Azure Bastion protects your virtual machines from exposing RDP/SSH ports to the outside world, while still providing secure access using RDP/SSH. 
+- With Azure Bastion, you connect to the virtual machine directly from the Azure portal with just ONE CLICK. 
+
 
 # Use Case
 - Create a vm with no public IP
